@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --button-color: linear-gradient(135deg, #4b0c40, #1752a0);
+    --primary: blue;
+    --personal: var(--primary);
+    --home:  rgb(245, 94, 0);
+    --education: brown;
+    --light: #EEE;
+    --grey: #888;
+    --dark: #313154;
+    --danger: linear-gradient(135deg, #270c0c, #dd1f0e);
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    --personal-glow: 0px 0px 4px blue;
+    --home-glow: 0px 0px 4px rgb(245, 94, 0);
+    --education-glow: 0px 0px 4px brown;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+header{
+    padding-bottom: 40px;
+}
+
+.aboutcontent {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 80px;
+    justify-content: space-between;
+}
+
+.aboutcontent .col-xxl-3 img {
+    height: 440px;
+    width: 440px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 30px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.aboutcontent .col-xxl-3 img:hover {
+    border: 2px solid #1752a0;
+    transform: scale(1);
+    padding: 0px;
+}
+
+#right {
+    margin-left: 20px;
+}
+
+.aboutcontent .col-xxl-3 .text {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.btn.btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--button-color);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 2px solid;
+    transition: all 0.2s ease;
+}
+
+.btn.btn.btn-primary:hover {
+    background: none;
+    border-color: var(--button-color);
+    color: black;
+    transform: scale(1.1);
+}
+
+.aboutcontent .col-xxl-3 .text span {
+    background-image: var(--button-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Project section */
+.project {
+    background: var(--light);
+    color: var(--dark);
+    padding: 10px 60px 10px 60px;
+    border-radius: 12px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+h3 {
+    color: var(--dark);
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding: 15px 0px;
+}
+
+h4 {
+    color: var(--grey);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.greeting .title input {
+    margin-left: 0px;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.create-todo input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 16px 24px;
+    color: var(--dark);
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+}
+
+.create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+
+.create-todo .options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+}
+
+.bubble::after {
+    content: '';
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    border-radius: 999px;
+    transition: 0.2s ease-in-out;
+}
+
+.bubble.personal {
+    border-color: var(--personal);
+    box-shadow: var(--personal-glow);
+}
+
+.bubble.personal::after {
+    background-color: var(--personal);
+    box-shadow: var(--personal-glow);
+}
+
+.bubble.Home {
+    border-color: var(--home);
+    box-shadow: var(--home-glow);
+}
+
+.bubble.Home::after {
+    background-color: var(--home);
+    box-shadow: var(--home-glow);
+}
+
+.bubble.Education {
+    border-color: var(--education);
+    box-shadow: var(--education-glow);
+}
+
+.bubble.Education::after {
+    background-color: var(--education);
+    box-shadow: var(--education-glow);
+}
+
+input:checked~.bubble::after {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.create-todo .options label div {
+    color: var(--dark);
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.create-todo button {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 16px 24px;
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--button-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease-out
+}
+.todo-list .list {
+    margin: 16px 0;
+}
+
+.todo-list .todo-item {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+}
+
+.todo-item label {
+    display: block;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.todo-item .todo-content {
+    flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+    color: var(--dark);
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.todo-item .todo-content input:hover {
+    max-width: none;
+}
+
+
+.todo-item .actions {
+    display: flex;
+    align-items: center;
+    
+}
+.todo-item .actions button{
+    border-radius: 2px;
+    padding: 3px;
+    color: white;
+    margin-left: 2px;
+}
+
+.todo-item .actions button.edit {
+    background: var(--button-color);
+}
+
+.todo-item .actions button.delete {
+    background: var(--danger)
+    
+}
+
+.todo-item .actions button:hover {
+    opacity: 0.75;
+}
+
+.todo-item.done .todo-content input {
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+
+/* Media */
+@media (max-width: 1200px) {
+    .aboutcontent {
+        padding: 0 50px;
+        height: fit-content;
+
+    }
+}
+
+@media (max-width: 991px) {
+    .aboutcontent {
+        flex-direction: column;
+        /* height: fit-content; */
+    }
+
+    .aboutcontent #left {
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 571px) {
+    .aboutcontent .col-xxl-3 img {
+        width: 360px;
+        height: 360px;
+    }
+
+    .aboutcontent .col-xxl-3 .text {
+        margin-bottom: 20px;
+        font-size: px;
+        font-weight: 600;
+    }
+
+    .aboutcontent {
+        padding: 0px 0px;
+
+    }
+
+    .project {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .create-todo .options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .create-todo .options label {
+        display: flex;
+        flex-direction: row;
+        background-color: #FFF;
+        padding: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+
+    }
+
+    .create-todo .options label div {
+        font-size: 18px;
+        margin-top: 0px;
+        margin-left: 10px;
+        justify-content: center;
+    }
+
+    .bubble {
+        margin-top: 3px;
+    }
+
+    .todo-item .todo-content {
+        flex: 1 1 -1%;
+    }
+}

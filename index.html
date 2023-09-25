@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-xxl">
+            <div class="aboutcontent">
+                <div class="col-xxl-3" id="left">
+                    <img src="images/1637048218606 (1).jpg" alt="">
+                </div>
+                <div class="col-xxl-3" id="right">
+                    <div class="text">Hi, I am Nurul Azim <span>Sakib</span><br>Matric Id : C223043</div>
+                    <p>I've selected a todo list as the focus of our software development project, recognizing its
+                        widespread utility in daily life. To create an accessible and user-friendly todo list, I've used
+                        the basics of HTML, CSS, Bootstrap, and JavaScript. Additionally, I tried to add essential
+                        features to enhance usability, ensuring this tool becomes a valuable asset for users.</p>
+                    <a href="#" class="btn btn-primary">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-xxl">
+            <div class="project">
+                <div class="greeting">
+                    <h3 class="title">
+                        Rise and Shine, <input type="text" id="name" placeholder="Name here" />
+                    </h3>
+                </div>
+
+                <div class="create-todo">
+                    <h3>BE ORGANIZED</h3>
+                    <form id="new-todo-form">
+                        <h4>What's your plan today?</h4>
+                        <input type="text" placeholder="e.g. November Finals" name="content" id="content" />
+
+                        <h4>Pick a category</h4>
+
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="category" id="category2" value="personal" />
+                                <span class="bubble personal"></span>
+                                <div>Personal</div>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" id="category1" value="Home" />
+                                <span class="bubble Home"></span>
+                                <div>Home</div>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" id="category3" value="Education" />
+                                <span class="bubble Education"></span>
+                                <div>Education</div>
+                            </label>
+                        </div>
+
+                        <button type="submit">Add todo</button>
+                    </form>
+                </div>
+
+                <div class="todo-list">
+                    <h3>TODO LIST</h3>
+                    <div class="list" id="todo-list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
