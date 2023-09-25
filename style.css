@@ -24,6 +24,10 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 p {
     text-align: justify;
@@ -361,6 +365,10 @@ input:checked~.bubble::after {
     .project {
         padding: 20px 20px;
     }
+    #right{
+        margin-left: 0px;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -394,4 +402,15 @@ input:checked~.bubble::after {
     .todo-item .todo-content {
         flex: 1 1 -1%;
     }
+}
+@media (max-width  : 420px)
+{
+    .todo-list .todo-item {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .todo-list .todo-item .actions{
+       margin-top: 15px;
+    }
+    
 }
